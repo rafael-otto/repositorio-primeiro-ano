@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+</html>
+<script>
+
+    //Entrada
+
+    const anoAtual = Number(prompt(`Informe o ano atual:`));
+
+    const codigoEmpregado = Number(prompt(`Informe o código do empregado:`));
+    
+    const anoNascimento = Number(prompt(`Informe o ano de nascimento do empregado:`));
+    const anoIngresso = Number(prompt(`Informe o ano de ingresso do empregado:`));
+
+    //Processamento
+
+    let idade = anoAtual - anoNascimento;
+    let tempoTrabalhado = anoAtual - anoIngresso;
+
+    if (idade >= 65 || tempoTrabalhado >= 30 || idade >= 65 && tempoTrabalhado >= 25) {
+        alert(`
+        Código do empregado: ${codigoEmpregado}
+        Idade: ${idade}
+        Tempo trabalhado: ${tempoTrabalhado}
+        Requer aposentadoria`);
+
+    } else {
+        alert(`
+        Código do empregado: ${codigoEmpregado}
+        Idade: ${idade}
+        Tempo trabalhado: ${tempoTrabalhado}
+        Não requer aposentadoria`);
+    }
+
+
+    /*if (idade >= 65) {
+        alert(`
+        Código do empregado: ${codigoEmpregado}
+        Idade: ${idade}
+        Tempo trabalhado: ${tempoTrabalhado}
+        Requer aposentadoria`);
+
+    } else if (tempoTrabalhado >= 30) {
+        alert(`
+        Código do empregado: ${codigoEmpregado}
+        Idade: ${idade}
+        Tempo trabalhado: ${tempoTrabalhado}
+        Requer aposentadoria`);
+
+    } else if (idade >= 65 && tempoTrabalhado >= 25) {
+        alert(`
+        Código do empregado: ${codigoEmpregado}
+        Idade: ${idade}
+        Tempo trabalhado: ${tempoTrabalhado}
+        Requer aposentadoria`);
+
+    } else {
+        alert(`
+        Código do empregado: ${codigoEmpregado}
+        Idade: ${idade}
+        Tempo trabalhado: ${tempoTrabalhado}
+        Não requer aposentadoria`);
+    }*/
+
+
+
+</script>

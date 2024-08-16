@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Dúzia de ovos
+    Peça para o usuário informar a quantidade de ovos que foram comprados e apresente a quantidade de dúzias correspondente.
+    Considere sempre dúzias cheias. Caso precise, arredonde para cima.
+    */
+
+    //ENTRADA
+    const quantidadeOvos = Number(prompt(`Informe quantos ovos foram comprados`));
+    
+    //PROCESSAMENTO
+    let duziaOvos = Math.ceil(quantidadeOvos /12);
+    
+    //SAÍDA
+    if (duziaOvos > 1){
+        alert(`Foram compradas ${duziaOvos} dúzias de ovos`);
+    }
+    else {
+        alert(`Foi comprada ${duziaOvos} dúzia de ovos`);
+    }
+</script>

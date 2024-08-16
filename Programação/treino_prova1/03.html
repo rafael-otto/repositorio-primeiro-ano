@@ -1,0 +1,27 @@
+<script>
+    /*
+Problema: Média Ponderada
+Um professor aplicou, durante o trimestre, 4 mecanismos avaliativos.
+- A nota 1 possui peso 0.5
+- A nota 2 possui peso 1
+- A nota 3 possui peso 1.5
+- A nota 4 possui peso 2
+Peça para o usuário informar quais são as 4 notas obtidas e calcule a média trimestral do aluno.
+*/
+
+//entrada
+
+const PrimeiraNota = Number(prompt(`Informe a sua primeira nota:`));
+const SegundaNota = Number(prompt(`Informe a sua segunda nota:`));
+const TerceiraNota = Number(prompt(`Informe a sua terceira nota:`));
+const QuartaNota = Number(prompt(`Informe a sua quarta nota:`));
+
+//processamento
+
+const mediaFinal = (PrimeiraNota * 0.5 / 5) + (SegundaNota * 1 / 5) + (TerceiraNota * 1.5 / 5) + (QuartaNota * 2 / 5);
+
+//saida
+
+alert(`A sua média final é de: ${mediaFinal.toFixed(2).replace(".", ",")}`)
+
+</script>
