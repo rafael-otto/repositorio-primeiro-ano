@@ -1,0 +1,100 @@
+/*===============
+    Css Reset
+=================*/
+
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+    }
+
+
+/*=====================
+    Formatação geral
+=======================*/
+
+html {
+    font-size: calc(10px + 1vw);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #21243D;
+}
+
+html body a{
+    text-decoration: none;
+    color: #21243D;
+}
+
+/*================================
+    Formatação do topo da página
+==================================*/
+header {
+    margin: 0 5vw 3vw 5vw;
+}
+
+
+header nav ul{
+    display: flex;  
+    justify-content: right;
+}
+
+header nav ul li{
+    margin: 2vw 10px 0 10px;
+}
+
+header nav ul li.atual a{
+    color: #ff6464;
+}
+
+/*================================
+    Formatação de conteúdo
+==================================*/
+
+main.works {
+    margin: 0 10vw 0 10vw ;
+}
+main.works h1{
+    font-weight: normal;
+    margin: 0 0 3vw 0;
+}
+main.works section {
+    border-bottom: 1px solid #E0E0E0;
+    padding: 2vw 0 2vw 0;
+}
+main.works section:last-child{
+    border: none;
+}
+
+main.works section p {
+    margin: 1vw 0 1vw 0;
+}
+
+main.works section p span {
+    color: white;
+    background-color: #ff6464;
+    border-radius: 20px;
+    padding: 3px 10px 3px 10px;
+    font-weight: bold;
+}
+/*================================
+    Formatação do rodapé
+==================================*/
+
+footer{
+    text-align: center;
+    padding: 0 0 2vw 0;
+    font-size: medium;
+}
+footer nav ul{
+    display: flex;
+    justify-content: center;
+}
+footer nav ul li {
+    margin: 15px;
+    font-size: 2rem;
+}
+
+footer nav ul li a span {
+    color: #21243D;
+}
