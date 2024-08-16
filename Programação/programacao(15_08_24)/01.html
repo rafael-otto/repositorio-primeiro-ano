@@ -1,0 +1,20 @@
+<script>
+
+    const notaUm = Number(prompt(`Informe a sua nota 1:`));
+    const notaDois = Number(prompt(`Informe a sua nota 2:`));
+    const notaTres = Number(prompt(`Informe a sua nota 3:`));
+    const notaMediaExercicio = Number(prompt(`Informe a sua média dos exercícios`));
+
+    const mediaAproveitamento = (notaUm + (notaDois * 2) + (notaTres * 3) + notaMediaExercicio) / 7;
+
+    if (mediaAproveitamento >= 9) {
+    alert(`Conceito A`);        
+    } else if (mediaAproveitamento >= 7.5 && mediaAproveitamento < 9) {
+        alert(`Conceito B`);
+    } else if (mediaAproveitamento >= 6 && mediaAproveitamento < 7.5) {
+        alert(`Conceito C`);
+    } else {
+        alert(`Conceito D`);
+    }
+
+</script>

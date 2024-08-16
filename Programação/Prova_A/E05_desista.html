@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Custo do Moto Táxy
+    Elaborar um programa para um motot taxy. O programa deve ler o valor a ser pago para cada 5 km de distância e a distância total para realizar a entrega, em km. 
+    Informe o valor a ser pago pelo cliente, sabendo que as frações extras de 5 kms devem ser cobradas de forma integral.
+
+    */
+
+    //Entrada
+    const valorKm = Number(prompt(`Informe o valor a ser pago a cada 5km:`));
+    const kmRodado = Number(prompt(`Informe a disância total percorrida:`));
+
+    //Processamento
+    const kmRedondo = Math.ceil(kmRodado / 5);
+    const valorPagar = kmRedondo * valorKm;
+    
+    //Saída
+    alert(`O valor que o cliente deve pagar é de ${valorPagar}`);
+</script>
