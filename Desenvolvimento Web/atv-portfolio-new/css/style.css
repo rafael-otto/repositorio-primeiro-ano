@@ -26,6 +26,10 @@ html body a{
     color: #21243D;
 }
 
+main {
+    margin: 0 10vw 0 10vw ;
+}
+
 /*================================
     Formatação do topo da página
 ==================================*/
@@ -48,12 +52,9 @@ header nav ul li.atual a{
 }
 
 /*================================
-    Formatação de conteúdo
+    Formatação Works
 ==================================*/
 
-main.works {
-    margin: 0 10vw 0 10vw ;
-}
 main.works h1{
     font-weight: normal;
     margin: 0 0 3vw 0;
@@ -77,6 +78,61 @@ main.works section p span {
     padding: 3px 10px 3px 10px;
     font-weight: bold;
 }
+/*================================
+    Formatação Home page
+==================================*/
+
+section.banner {
+    display: flex;
+    margin: 6vw 0 3vw 0;
+}
+section.banner h1 {
+    font-size: 2rem;
+}
+
+section.banner p {
+    margin: 2vw 12vw 0 0;
+}
+
+section.banner button {
+    background-color: #ff6464;
+    color: white;
+    font-size: 0.8rem;
+    padding: 15px 20px 15px 20px;
+    margin: 2vw 0 2vw 0;
+    border-radius: 3px;
+}
+
+section.rt-post {
+    background-color: #EDF7FA;
+    padding: 2vw 4vw 2vw 4vw;
+    border-radius: 3px;
+    
+}
+section.rt-post h2{
+    font-weight: normal;
+    margin: 1vw 0 1vw 0;
+}
+
+section.rt-post ul{
+    display: flex;
+}
+
+section.rt-post ul li{
+    background-color: white;
+    padding: 15px 10px 15px 10px;
+    margin: 0 2vw 0 0;
+    border-radius: 5px;
+}
+
+section.rt-post ul li:last-child {
+    margin: 0;
+}
+
+section.rt-post ul li p{
+    margin: 1vw 0 1vw 0;
+}
+
 /*================================
     Formatação do rodapé
 ==================================*/
