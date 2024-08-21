@@ -17,7 +17,7 @@
     let idade = anoAtual - anoNascimento;
     let tempoTrabalhado = anoAtual - anoIngresso;
 
-    if (idade >= 65 || tempoTrabalhado >= 30 || idade >= 65 && tempoTrabalhado >= 25) {
+    if (idade >= 65 || tempoTrabalhado >= 30 || (idade >= 60 && tempoTrabalhado >= 25)) {
         alert(`
         Código do empregado: ${codigoEmpregado}
         Idade: ${idade}
