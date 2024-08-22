@@ -1,16 +1,25 @@
-<meta charset="UTF-8">
 <script>
     /*
-    Problema: Cumprimentar
-    Peça para o usuário informar o seu nome. Após, o programa deverá apresentar a seguinte mensagem:
-        Bom dia, NOME_DA_PESSOA! Seja bem-vindo!
+    //PROBLEMA: TROCAR VARIÁVEIS
+    Faça um script que pede dois inteiros e armazene eles em duas variáveis.
+    Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
     */
 
     //ENTRADA
-    const nome = prompt(`Informe o seu nome:`).trim();
+    let valorUm = Number(prompt(`Informe um número inteiro:`));
+    let valorDois = Number(prompt(`Informe outro número inteiro:`));
 
     //PROCESSAMENTO
 
+    let mudanca = valorUm
+    valorUm = valorDois
+    valorDois = mudanca
+    
     //SAÍDA
-    document.write(`Bom dia, ${nome}! Seja bem-vindo!`);
+    if (valorUm === valorDois) {
+    alert(`A troca dos números não é necessária`);
+} else {
+    alert(`Antes: valor 1 = ${valorDois} valor 2 = ${valorUm}`);
+    alert(`Depois: valor 1 = ${valorUm} valor 2 = ${valorDois}`);
+}
 </script>
