@@ -10,7 +10,6 @@
     border:0
     }
 
-
 /*=====================
     Formatação geral
 =======================*/
@@ -131,6 +130,39 @@ section.rt-post ul li:last-child {
 
 section.rt-post ul li p{
     margin: 1vw 0 1vw 0;
+}
+
+section.ft-works {
+    padding: 2vw 5vw 2vw 5vw;
+}
+
+section.ft-works h2 {
+    font-weight: normal;
+    margin:1vw 0 1vw 0;
+}
+
+/* > significa que é para apenas a div filha direta */
+section.ft-works >div{
+    display: flex;
+}
+
+section.ft-works div img{
+    margin: 1vw 0 1vw 0
+}
+
+section.ft-works div p{
+    margin: 1vw 0 1vw 0
+}
+
+section.ft-works div div p.ft-works-text {
+    color: #8695A4;
+}
+
+section.ft-works div div p span {
+    color: white;
+    background-color: #142850;
+    border-radius: 20px;
+    padding: 3px 10px 3px 10px;
 }
 
 /*================================
