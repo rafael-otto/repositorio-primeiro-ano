@@ -6,11 +6,17 @@
     */
 
     //ENTRADA
-
+    const notaAntesLb = Number(prompt(`Informe a nota do little brother antes da "adoção":`));
+    const notaDepoisLb = Number(prompt(`Informe a nota do little brother depois da "adoção":`));
     
     //PROCESSAMENTO
-    
-    
+    let acrescimoNotaBb = (notaDepoisLb - notaAntesLb) / 4;
+    if (acrescimoNotaBb > 0) {
+        alert(`O acréscimo da nota do big brother é de: ${ acrescimoNotaBb}`);
+    } else {
+        alert(`A nota do little brother não melhorou, o big brother não ganhará o acréscimo.`)
+    }
+
     //SAÍDA
 
 </script>
