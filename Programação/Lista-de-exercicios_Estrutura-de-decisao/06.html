@@ -11,7 +11,7 @@
     */
 
     //ENTRADA
-    const numeroInteiro = Number(prompt(`Informe um número inteiro menor que 1000:`));
+    const numeroInteiro = Number(prompt(`Informe um número inteiro menor que 1000 e igual ou maior que 0:`));
 
     //PROCESSAMENTO
 
@@ -21,55 +21,9 @@
     let centenas = (numeroInteiro - dezenaUnidade) / 100;
 
     
-    if (numeroInteiro >= 100 ) {
-        alert(`Esse número tem ${centenas} centena(s), `);
+    if (numeroInteiro < 1000 && numeroInteiro >= 0) {
+        alert(`Esse número tem ${centenas} centena(s), ${dezenas} dezena(s) e ${unidades} unidade(s).`);
+    } else {
+        alert(`Número inválido`);
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // if (numeroInteiro >= 1000) {
-    //     alert(`Número inválido`);
-    // } 
-    
-    // if (centenas === 0 && dezenas === 0 && unidades === 0) {
-    //     alert(`Esse número tem ${unidades} unidades.`);
-
-    // } else if (centenas === 0 && dezenas === 0 && unidades === 1) {
-    //     alert(`Esse número tem ${unidades} unidade`);
-
-    // } else if (centenas === 0 && dezenas === 0 && unidades > 1){
-    //     alert(`Esse número tem ${unidades} unidades`);
-
-    // } else if (centenas === 0 && dezenas === 1 && unidades === 1) {
-    //     alert(`Esse número tem ${dezenas} dezena e ${unidades} unidade`);
-
-    // } else if (centenas === 0 && dezenas > 1 && unidades === 1) {
-    //     alert(`Esse número tem `)
-    // }
-    
-    //SAÍDA
-
 </script>
