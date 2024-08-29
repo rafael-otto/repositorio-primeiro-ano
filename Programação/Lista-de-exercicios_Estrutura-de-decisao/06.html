@@ -11,10 +11,64 @@
     */
 
     //ENTRADA
-
+    const numeroInteiro = Number(prompt(`Informe um número inteiro menor que 1000:`));
 
     //PROCESSAMENTO
 
+    let dezenaUnidade = numeroInteiro % 100;
+    let unidades = dezenaUnidade % 10;
+    let dezenas = (dezenaUnidade - unidades) / 10;
+    let centenas = (numeroInteiro - dezenaUnidade) / 100;
+
+    
+    if (numeroInteiro >= 100 ) {
+        alert(`Esse número tem ${centenas} centena(s), `);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // if (numeroInteiro >= 1000) {
+    //     alert(`Número inválido`);
+    // } 
+    
+    // if (centenas === 0 && dezenas === 0 && unidades === 0) {
+    //     alert(`Esse número tem ${unidades} unidades.`);
+
+    // } else if (centenas === 0 && dezenas === 0 && unidades === 1) {
+    //     alert(`Esse número tem ${unidades} unidade`);
+
+    // } else if (centenas === 0 && dezenas === 0 && unidades > 1){
+    //     alert(`Esse número tem ${unidades} unidades`);
+
+    // } else if (centenas === 0 && dezenas === 1 && unidades === 1) {
+    //     alert(`Esse número tem ${dezenas} dezena e ${unidades} unidade`);
+
+    // } else if (centenas === 0 && dezenas > 1 && unidades === 1) {
+    //     alert(`Esse número tem `)
+    // }
     
     //SAÍDA
 
