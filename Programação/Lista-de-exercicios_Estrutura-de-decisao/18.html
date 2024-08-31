@@ -6,11 +6,39 @@
     */
 
     //ENTRADA
-
+    const hemisferio = prompt(`Informe em qual hemisfério você está:`).toLocaleLowerCase();
+    const mes = prompt(`Informe o mês atual:`).toLocaleLowerCase();
 
     //PROCESSAMENTO
 
-    
+    if (hemisferio === "sul") {
+        if ((mes === "dezembro") || (mes === "janeiro") || (mes === "fevereiro")) {
+            alert(`A estação atual é: Verão`);
+        } else if ((mes === "março") || (mes === "abril") || (mes === "maio")) {
+            alert(`A estação atual é: Outono`);
+        } else if ((mes === "junho") || (mes === "julho") || (mes === "agosto")) {
+            alert(`A estação atual é: Inverno`);
+        } else if ((mes === "setembro") || (mes === "outubro") || (mes === "novembro")) {
+            alert(`A estação atual é: Primavera`);
+        } else {
+            alert(`Você informou algum valor inválido`);
+        };
+    } else if (hemisferio === "norte") {
+        if ((mes === "dezembro") || (mes === "janeiro") || (mes === "fevereiro")) {
+            alert(`A estação atual é: Inverno`);
+        } else if ((mes === "março") || (mes === "abril") || (mes === "maio")) {
+            alert(`A estação atual é: Primavera`);
+        } else if ((mes === "junho") || (mes === "julho") || (mes === "agosto")) {
+            alert(`A estação atual é: Verão`);
+        } else if ((mes === "setembro") || (mes === "outubro") || (mes === "novembro")) {
+            alert(`A estação atual é: Outono`);
+        } else {
+            alert(`Você informou algum valor inválido`);
+        };
+    } else {
+        alert(`Você informou algum valor inválido`);
+    };
+
     //SAÍDA
 
 </script>

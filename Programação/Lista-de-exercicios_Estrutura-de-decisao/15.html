@@ -6,10 +6,16 @@
     */
 
     //ENTRADA
-
+    const numero = Number(prompt(`Informe um número:`));
 
     //PROCESSAMENTO
+    let numeroRedondo = Math.ceil(numero);
 
+    if ((numero === numeroRedondo)) {
+        alert(`O número é inteiro`);
+    } else {
+        alert(`O número é decimal`);
+    };
     
     //SAÍDA
 

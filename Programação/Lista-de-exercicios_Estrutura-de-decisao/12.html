@@ -10,11 +10,24 @@
     */
 
     //ENTRADA
-
+    const porteCachorro = prompt(`Informe o porte do cachorro: P-pequeno M-médio G-grande`);
+    const idadeAnosHumano = prompt(`Informe a idade do cachorro em anos humanos:`);
     
     //PROCESSAMENTO
+    let idadeRealCachorro = idadeAnosHumano;
 
-    
+    if ((porteCachorro.toLocaleUpperCase() == "P") && (isNaN(idadeAnosHumano) != true)) {
+        idadeRealCachorro *= 5;
+        alert(`A idade real do seu cachorro é de ${idadeRealCachorro} anos`);
+    }  else if ((porteCachorro.toLocaleUpperCase() == "M") && (isNaN(idadeAnosHumano) != true)) {
+        idadeRealCachorro *= 6;
+        alert(`A idade real do seu cachorro é de ${idadeRealCachorro} anos`);
+    } else if ((porteCachorro.toLocaleUpperCase() == "G") && (isNaN(idadeAnosHumano) != true)) {
+        idadeRealCachorro *= 7;
+        alert(`A idade real do seu cachorro é de ${idadeRealCachorro} anos`);
+    } else {
+        alert(`Você informou algum valor inválido`);
+    };
     //SAÍDA
 
 </script>

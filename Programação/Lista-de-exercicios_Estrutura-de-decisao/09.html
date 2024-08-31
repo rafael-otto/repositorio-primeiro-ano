@@ -10,178 +10,240 @@
     //ENTRADA
     const numeroUm = Number(prompt(`Informe o primeiro número:`));
     const numeroDois = Number(prompt(`Informe o segundo número:`));
-    const operação = prompt(`Qual operação você deseja realizar? A-adição D-divisão M-multiplicação S-subtração`);
+    const operacao = prompt(`Qual operação você deseja realizar? A-adição D-divisão M-multiplicação S-subtração`);
 
     //PROCESSAMENTO
 
-    if (operação === "A" || operação === "a") {
-        let resultado = numeroUm + numeroDois;
-        alert(`O resultado é ${resultado}`);
+    let resultado = 0;
+    let resultadoValido = true;
 
-        if ((resultado % 2) === 0) {
-            alert(`O número é par`);
-
-            if ((resultado % 1) === 0) {
-                alert(`O número é inteiro`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            } else {
-                alert(`O número é decimal`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            }
-        } else {
-            alert(`O número é impar`);
-
-            if ((resultado % 1) === 0) {
-                alert(`O número é inteiro`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            } else {
-                alert(`O número é decimal`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            }
-        }
-    } else if (operação === "D" || operação === "d") {
-        let resultado = numeroUm / numeroDois;
-        alert(`O resultado é ${resultado}`);
-
-        if ((resultado % 2) === 0) {
-            alert(`O número é par`);
-
-            if ((resultado % 1) === 0) {
-                alert(`O número é inteiro`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            } else {
-                alert(`O número é decimal`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            }
-        } else {
-            alert(`O número é impar`);
-
-            if ((resultado % 1) === 0) {
-                alert(`O número é inteiro`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            } else {
-                alert(`O número é decimal`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            }
-        }
-    } else if (operação === "M" || operação === "m") {
-        let resultado = numeroUm * numeroDois;
-        alert(`O resultado é ${resultado}`);
-
-        if ((resultado % 2) === 0) {
-            alert(`O número é par`);
-
-            if ((resultado % 1) === 0) {
-                alert(`O número é inteiro`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            } else {
-                alert(`O número é decimal`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            }
-        } else {
-            alert(`O número é impar`);
-
-            if ((resultado % 1) === 0) {
-                alert(`O número é inteiro`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            } else {
-                alert(`O número é decimal`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            }
-        }
-    } else if (operação === "S" || operação === "s") {
-        let resultado = numeroUm - numeroDois;
-        alert(`O resultado é ${resultado}`);
-
-        if ((resultado % 2) === 0) {
-            alert(`O número é par`);
-
-            if ((resultado % 1) === 0) {
-                alert(`O número é inteiro`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            } else {
-                alert(`O número é decimal`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            }
-        } else {
-            alert(`O número é impar`);
-
-            if ((resultado % 1) === 0) {
-                alert(`O número é inteiro`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            } else {
-                alert(`O número é decimal`);
-                if (resultado >= 0) {
-                    alert(`O número é positivo`);
-                } else {
-                    alert(`O número é negativo`);
-                }
-            }
-        }
+    if (isNaN(numeroUm) || isNaN(numeroDois)) {
+        alert(`Você forneceu algum número inválido`);
     } else {
-        alert(`Inválido`);
-    }
 
-    //SAÍDA
+        //Operações
 
+        if (operacao === "A" || operacao === "a") {
+            resultado = numeroUm + numeroDois;
+            alert(`O resultado é ${resultado}`);
+
+        } else if (operacao === "D" || operacao === "d") {
+        
+            if (numeroDois === 0) {
+                resultadoValido = false;
+                alert(`A divisão por zero não é permitida.`);
+            } else {
+                resultado = numeroUm / numeroDois;
+                alert(`O resultado é ${resultado}`);
+            }
+
+        } else if (operacao === "M" || operacao === "m") {
+            resultado = numeroUm * numeroDois;
+            alert(`O resultado é ${resultado}`);
+
+        } else if (operacao === "S" || operacao === "s") {
+            resultado = numeroUm - numeroDois;
+            alert(`O resultado é ${resultado}`);
+            
+        } else {
+            resultadoValido = false
+            alert(`Operação inválida`);
+        };
+
+        if (resultadoValido === true) {
+            //Par ou Ímpar
+            if ((resultado % 2) === 0) {
+                alert(`O número é par`);
+            } else {
+                alert(`O número é ímpar`);
+            };
+
+            //Positivo ou Negativo
+            if (resultado >= 0) {
+                alert(`O número é positivo`);
+            } else {
+                alert(`O número é negativo`);
+            };
+
+            //Inteiro ou Decimal
+            if ((resultado % 1) === 0) {
+                alert(`O número é inteiro`);
+            } else {
+                alert(`O número é decimal`);
+            };
+        };
+    };
+
+</script>
+
+<script>
+    /*
+        if (operação === "A" || operação === "a") {
+            let resultado = numeroUm + numeroDois;
+            alert(`O resultado é ${resultado}`);
+    
+            if ((resultado % 2) === 0) {
+                alert(`O número é par`);
+    
+                if ((resultado % 1) === 0) {
+                    alert(`O número é inteiro`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                } else {
+                    alert(`O número é decimal`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                }
+            } else {
+                alert(`O número é impar`);
+    
+                if ((resultado % 1) === 0) {
+                    alert(`O número é inteiro`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                } else {
+                    alert(`O número é decimal`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                }
+            }
+        } else if (operação === "D" || operação === "d") {
+            let resultado = numeroUm / numeroDois;
+            alert(`O resultado é ${resultado}`);
+    
+            if ((resultado % 2) === 0) {
+                alert(`O número é par`);
+    
+                if ((resultado % 1) === 0) {
+                    alert(`O número é inteiro`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                } else {
+                    alert(`O número é decimal`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                }
+            } else {
+                alert(`O número é impar`);
+    
+                if ((resultado % 1) === 0) {
+                    alert(`O número é inteiro`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                } else {
+                    alert(`O número é decimal`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                }
+            }
+        } else if (operação === "M" || operação === "m") {
+            let resultado = numeroUm * numeroDois;
+            alert(`O resultado é ${resultado}`);
+    
+            if ((resultado % 2) === 0) {
+                alert(`O número é par`);
+    
+                if ((resultado % 1) === 0) {
+                    alert(`O número é inteiro`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                } else {
+                    alert(`O número é decimal`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                }
+            } else {
+                alert(`O número é impar`);
+    
+                if ((resultado % 1) === 0) {
+                    alert(`O número é inteiro`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                } else {
+                    alert(`O número é decimal`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                }
+            }
+        } else if (operação === "S" || operação === "s") {
+            let resultado = numeroUm - numeroDois;
+            alert(`O resultado é ${resultado}`);
+    
+            if ((resultado % 2) === 0) {
+                alert(`O número é par`);
+    
+                if ((resultado % 1) === 0) {
+                    alert(`O número é inteiro`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                } else {
+                    alert(`O número é decimal`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                }
+            } else {
+                alert(`O número é impar`);
+    
+                if ((resultado % 1) === 0) {
+                    alert(`O número é inteiro`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                } else {
+                    alert(`O número é decimal`);
+                    if (resultado >= 0) {
+                        alert(`O número é positivo`);
+                    } else {
+                        alert(`O número é negativo`);
+                    }
+                }
+            }
+        } else {
+            alert(`Inválido`);
+        }
+        */
 </script>

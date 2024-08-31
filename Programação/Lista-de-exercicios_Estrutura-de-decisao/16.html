@@ -6,10 +6,17 @@
     */
 
     //ENTRADA
-
+    const ano = Number(prompt(`Informe um ano`));
     
     //PROCESSAMENTO
 
+    if ((ano % 4 === 0) && (ano % 1000 != 0) && (isNaN(ano) != true)) {
+        alert(`O ano é bissexto`);
+    } else if (isNaN(ano) != true) {
+        alert(`O ano não é bissexto`);
+    } else {
+        alert(`Você informou um valor inválido`);
+    };
     
     //SAÍDA
 

@@ -14,10 +14,38 @@
     */
 
     //ENTRADA
-
+    const litrosVendidos = Number(prompt(`Quantos litros foram vendidos?`));
+    const tipoCombustível = prompt(`Qual o tipo de combustível? A-álcool, G-gasolina`);
 
     //PROCESSAMENTO
 
+    let alcool = 6.10;
+    let gasolina = 6.50;
+    let valorTotal = 0;
+
+    if ((tipoCombustível.toLocaleUpperCase() == "A") && (isNaN(litrosVendidos) != true)) {
+        if (litrosVendidos <= 20) {
+            alcool *= 0.96;
+            alcool *= litrosVendidos;
+            alert(`O valor que deve ser pago é: ${alcool.toFixed(3).replace(".", ",")}`)
+        } else {
+            alcool *= 0.94;
+            alcool *= litrosVendidos;
+            alert(`O valor que deve ser pago é: ${alcool.toFixed(3).replace(".", ",")}`)
+        };
+    } else if ((tipoCombustível.toLocaleUpperCase() == "G") && (isNaN(litrosVendidos) != true)){
+        if (litrosVendidos <= 20) {
+            gasolina *= 0.97;
+            gasolina *= litrosVendidos;
+            alert(`O valor que deve ser pago é: ${gasolina.toFixed(3).replace(".", ",")}`)
+        } else {
+            gasolina *= 0.95;
+            gasolina *= litrosVendidos;
+            alert(`O valor que deve ser pago é: ${gasolina.toFixed(3).replace(".", ",")}`)
+        };
+    } else {
+        alert(`Você informou algum valor inválido`)
+    };
     
     //SAÍDA
 

@@ -10,11 +10,27 @@
     */
 
     //ENTRADA
-
+    const preco = Number(prompt(`Informe o preço de um produto:`));
     
     //PROCESSAMENTO
-
+    let aumentoPreco = preco;
     
+    if ((isNaN(preco) != true) && (preco <= 280)) {
+        aumentoPreco *= 1.20;
+        alert(`O novo preço do produto é de ${aumentoPreco.toFixed(2).replace(".", ",")} reais`);
+    } else if ((isNaN(preco) != true) && (preco <= 700)) {
+        aumentoPreco *= 1.15;
+        alert(`O novo preço do produto é de ${aumentoPreco.toFixed(2).replace(".", ",")} reais`);
+    } else if ((isNaN(preco) != true) && (preco <= 1500)) {
+        aumentoPreco *= 1.10;
+        alert(`O novo preço do produto é de ${aumentoPreco.toFixed(2).replace(".", ",")} reais`);
+    } else if ((isNaN(preco) != true) && (preco > 1500)) {
+        aumentoPreco *= 1.05;
+        alert(`O novo preço do produto é de ${aumentoPreco.toFixed(2).replace(".", ",")} reais`);
+    } else {
+        alert(`Você informou um valor inválido`);
+    };
+
     //SAÍDA
 
 </script>

@@ -11,11 +11,47 @@
     */
 
     //ENTRADA
-
+    const telefonou = prompt("Telefonou para a vítima? S-sim N-não");
+    const esteveLocal = prompt("Esteve no local do crime? S-sim N-não")
+    const moraPerto = prompt("Mora perto da vítima? S-sim N-não");
+    const deviaParaVitima = prompt("Devia para a vítima? S-sim N-não");
+    const trabalhouComVitima = prompt("Já trabalhou com a vítima? S-sim N-não");
 
     //PROCESSAMENTO
 
-    
+    let classificacao = 0;
+
+    if (telefonou === "S" || telefonou === "s") {
+        classificacao++;
+    };
+
+    if (esteveLocal === "S" || esteveLocal === "s") {
+        classificacao++;
+    };
+
+    if (moraPerto === "S" || moraPerto === "s") {
+        classificacao++;
+    };
+
+    if (deviaParaVitima === "S" || deviaParaVitima === "s") {
+        classificacao++;
+    };
+
+    if (trabalhouComVitima === "S" || trabalhouComVitima === "s") {
+        classificacao++;
+    };
+
+    //Classificação
+    if (classificacao === 2) {
+        alert(`Classificação: Suspeita`);
+    } else if ((classificacao === 3) || (classificacao === 4)) {
+        alert(`Classificação: Cúmplice`);
+    } else if (classificacao === 5) {
+        alert(`Classificação: ASSASSINO`);
+    } else {
+        alert(`Classificação: Inocente`);
+    };
+
     //SAÍDA
 
 </script>

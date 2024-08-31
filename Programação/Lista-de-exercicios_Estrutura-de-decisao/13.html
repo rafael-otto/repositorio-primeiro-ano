@@ -12,11 +12,23 @@
     */
 
     //ENTRADA
-
+    const nota = Number(prompt(`Informe uma nota:`));
     
     //PROCESSAMENTO
+    if ((isNaN(nota) != true) && (nota <= 10) && (nota >= 9)) {
+        alert(`Conceito A`)
+    } else if ((isNaN(nota) != true) && (nota <= 8.9) && (nota >= 8)) {
+        alert(`Conceito B`)
+    } else if ((isNaN(nota) != true) && (nota <= 7.9) && (nota >= 7)) {
+        alert(`Conceito C`)
+    } else if ((isNaN(nota) != true) && (nota <= 6.9) && (nota >= 6)) {
+        alert(`Conceito D`)
+    } else if ((isNaN(nota) != true) && (nota <= 5.9) && (nota >= 0)) {
+        alert(`Conceito E`)
+    } else {
+        alert(`Você informou algum valor inválido`);
+    };
 
-    
     //SAÍDA
 
 </script>
