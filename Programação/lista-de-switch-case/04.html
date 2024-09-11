@@ -6,9 +6,21 @@
     */
 
     // ENTRADA
-
+    const caractere = prompt(`Informe um caractere:`).toLowerCase();
     
     // PROCESSAMENTO
+    switch (caractere) {
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+            alert(`É uma vogal!`);
+            break;
+        default:
+            alert(`Não é uma vogal!`);
+            break;
+    }
 
     
     // SAÍDA

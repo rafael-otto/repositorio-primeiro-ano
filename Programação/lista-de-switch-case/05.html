@@ -12,10 +12,59 @@
     */
 
     //ENTRADA
-
+    const telefonou = prompt("Telefonou para a vítima? S-sim N-não").toLowerCase();
+    const esteveLocal = prompt("Esteve no local do crime? S-sim N-não").toLowerCase();
+    const moraPerto = prompt("Mora perto da vítima? S-sim N-não").toLowerCase();
+    const deviaParaVitima = prompt("Devia para a vítima? S-sim N-não").toLowerCase();
+    const trabalhouComVitima = prompt("Já trabalhou com a vítima? S-sim N-não").toLowerCase();
     
+    let classificação = 0;
+
     //PROCESSAMENTO
 
+    switch (telefonou) {
+        case "s":
+            classificação++;
+            break;
+    }
+    switch (esteveLocal) {
+        case "s":
+            classificação++;
+            break;
+    }
+    switch (moraPerto) {
+        case "s":
+            classificação++;
+            break;
+    }
+    switch (deviaParaVitima) {
+        case "s":
+            classificação++;
+            break;
+    }
+    switch (trabalhouComVitima) {
+        case "s":
+            classificação++;
+            break;
+    }
+
+    switch (classificação) {
+        case 2:
+            alert(`Suspeita!`);
+                break;
+        case 3:
+        case 4:
+            alert(`Cúmplice!`);
+                break;
+        case 5:
+            alert(`Assassino`);
+                break;
+        default:
+            alert(`Inocente`);
+                break;
+
+
+    }
 
     //SAÍDA
 

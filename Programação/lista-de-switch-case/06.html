@@ -10,11 +10,29 @@
     */
 
     // ENTRADA
-
+    const porteCachorro = prompt(`Informe o porte do cachorro: P-pequeno M-médio G-grande`).toUpperCase();
+    const idadeAnosHumano = Number(prompt(`Informe a idade do cachorro em anos humanos:`));
     
-    // PROCESSAMENTO
+    //PROCESSAMENTO
+    let idadeRealCachorro = idadeAnosHumano;
 
+    switch (porteCachorro) {
+        case "P":
+            idadeRealCachorro *= 5;
+            alert(`A idade real do seu cachorro é ${idadeRealCachorro} anos`);
+        break;
+        case "M":
+            idadeRealCachorro *= 6;
+            alert(`A idade real do seu cachorro é ${idadeRealCachorro} anos`);
+        break;
+        case "G":
+            idadeRealCachorro *= 7;
+            alert(`A idade real do seu cachorro é ${idadeRealCachorro} anos`);
+        break;
+    }
     
+
+
     // SAÍDA
 
 </script>
