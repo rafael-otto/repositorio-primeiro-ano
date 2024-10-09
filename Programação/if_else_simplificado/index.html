@@ -1,0 +1,88 @@
+<script>
+/*Faça um código em Javascript que receba do usuário as seguintes informações, nesta ordem:
+
+>>> o nome completo do empregado;
+>>> seu número de CPF;
+>>> o salário bruto desse empregado;
+>>> o código do seu cargo.
+
+Desconto de 12,5% sobre o salário bruto chamado de previdência social . Como exceção, o
+empregado não terá o desconto deste imposto apenas se seu salário bruto for inferior a R$
+1.412,00, que é o valor do salário mínimo atualmente.
+
+Outro desconto que usa o salário bruto como base é a contribuição sindical, onde seu valor
+varia conforme a tabela de cargos abaixo.
+
+Código              Desconto            Desconto                    Percentual de aumento no salário
+do cargo        Previdência Social      Contribuição sindical       bruto para o Próximo Mês
+
+abc123          12,5%                   7,5%                                8,0%
+123abc          12,5%                   6,5%                                7,5%
+xyz999          12,5%                   5,0%                                9,0%
+9a8b7c          12,5%                   4,5%                                5,0%
+log456          12,5%                   3,0%                                6,0%
+
+Após o processamento dos cálculos acima descritos, apresente apenas as informações abaixo
+separando-as por linha individual ('<br>'), obedecendo esta sequência:
+
+>> linha 1 - o nome completo do empregado e seu CPF;
+>> linha 2 - o valor em reais do desconto contribuição sindical;
+>> linha 3 - o valor em reais do desconto para o imposto de previdência social;
+>> linha 4 - o salário final do empregado após todos os descontos (Salário Líquido).
+>> linha 5 - O salário antigo (salário bruto) e novo salário final do empregado para o próximo mês (Aumento) */
+
+//ENTRADA
+
+const nome = prompt(`Informe o nome completo do empregado`);
+const cpf = prompt(`Informe o seu cpf:`);
+let salarioBruto = Number(prompt(`Informe o seu salário bruto:`));
+const cargo = prompt(`Informe o código do seu cargo:`).toLowerCase();
+
+
+//PROCESSAMENTO
+let descontoPrevidencia,descontoContribuicao,percentualAumento;
+
+while (isNaN(salarioBruto) || salarioBruto < 0) {
+    salarioBruto = Number(prompt(`Informe o seu salário bruto:`));
+}
+
+
+if (salarioBruto >= 1412) {
+    descontoPrevidencia = salarioBruto * 0.125;
+};
+
+if (cargo == "abc123") {
+    descontoContribuicao = salarioBruto * 0.075;
+    percentualAumento = salarioBruto * 0.08;
+} else if (cargo == '123abc' ) {
+    descontoContribuicao = salarioBruto * 0.065;
+    percentualAumento = salarioBruto * 0.075;
+} else if (cargo == "xyz999") {
+    descontoContribuicao = salarioBruto * 0.05;
+    percentualAumento = salarioBruto * 0.09;
+} else if (cargo == "9a8b7c") {
+    descontoContribuicao = salarioBruto * 0.045;
+    percentualAumento = salarioBruto * 0.05;
+} else if (cargo == "log456") {
+    descontoContribuicao = salarioBruto * 0.03;
+    percentualAumento = salarioBruto * 0.06;
+} 
+
+const salarioFinalDescontado = salarioBruto - (descontoPrevidencia + descontoContribuicao); 
+const salarioFinalAumentado = salarioFinalDescontado + percentualAumento;
+
+//SAÍDA
+
+document.write(`
+    <div style="text-align: center;">
+        Nome: ${nome}, CPF: ${cpf} <br>
+        Desconto Contribuição Sindical: R$${descontoContribuicao.toFixed(2)} <br>
+        Desconto Previdência Social: R$${descontoPrevidencia.toFixed(2)} <br>
+        Salário Final: R$${salarioLiquido.toFixed(2)} <br>
+        Salário Antigo: R$ ${salarioBruto.toFixed(2)} <br>
+    </div>
+`);
+
+
+
+</script>
