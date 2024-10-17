@@ -1,0 +1,70 @@
+<script>
+    //Entrada
+    
+    const uniHora = Number(prompt(`Informe o valor unitário da hora:`));
+    const horasTrabalhadas = Number(prompt(`Informe a quantidade de horas trabalhadas:`));
+    const quantidadeFilhosMenor = Number(prompt(`Informe a quantidade de filhos menores de 14 anos:`));
+
+    //Processamento
+
+    let salarioBruto = horasTrabalhadas * uniHora;
+    let salarioFamilia = 0;
+    let imposto = 0;
+    let salarioFinal = 0;
+
+    //Salarios
+
+    if (isNaN(uniHora) || isNaN(horasTrabalhadas) || isNaN(quantidadeFilhosMenor) || uniHora < 0 || horasTrabalhadas < 0 || quantidadeFilhosMenor < 0) {
+        
+        alert(`Valor inválido!`);
+
+    } else {
+        
+        if (salarioBruto <= 1372.81) {
+        salarioFamilia = 10.50 * quantidadeFilhosMenor;
+        imposto = salarioBruto * 0.08;
+        salarioFinal = salarioBruto - imposto + salarioFamilia;
+
+    } else if (salarioBruto > 1372.81 && salarioBruto <= 2743.25) {
+        salarioFamilia = 6.50 * quantidadeFilhosMenor;
+        imposto = salarioBruto * 0.10;
+        salarioFinal = salarioBruto - imposto + salarioFamilia;
+
+    } else if (salarioBruto > 2743.25) {
+        salarioFamilia = 1.50 * quantidadeFilhosMenor;
+        imposto = salarioBruto * 0.12;
+        salarioFinal = salarioBruto - imposto + salarioFamilia;
+    }
+
+    document.write(`
+        Salário bruto: R$ ${salarioBruto.toFixed(2).replace(".", ",")} <br>
+        Salário da família: R$ ${salarioFamilia.toFixed(2).replace(".", ",")} <br>
+        Imposto: R$ ${imposto.toFixed(2).replace(".", ",")} <br>
+        Salário Final: R$ ${salarioFinal.toFixed(2).replace(".", ",")}
+        `);
+
+    //Descontos
+
+    let agua = salarioFinal * 0.03;
+    let alimentacao = salarioFinal * 0.37;
+    let energiaEletrica = salarioFinal * 0.12;
+    let lazer = salarioFinal * 0.13;
+    let poupanca = salarioFinal * 0.15;
+    let educacao = salarioFinal * 0.20;
+
+    document.write(`
+        Água: R$ ${agua.toFixed(2).replace(".", ",")} <br>
+        Alimentação: R$ ${alimentacao.toFixed(2).replace(".", ",")} <br>
+        Energia Elétrica: R$ ${energiaEletrica.toFixed(2).replace(".", ",")} <br>
+        Lazer: R$ ${lazer.toFixed(2).replace(".", ",")} <br>
+        Poupança: R$ ${poupanca.toFixed(2).replace(".", ",")} <br>
+        Educação: R$ ${educacao.toFixed(2).replace(".", ",")}
+        `);
+
+    }
+    
+
+
+
+
+</script>

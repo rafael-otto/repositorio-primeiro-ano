@@ -1,0 +1,64 @@
+/*===================
+    Formatação Geral
+====================*/
+body{
+    padding: 2vw 8vw 0 8vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #60697B;
+}
+
+.blue-button{
+    border: none;
+    border-radius: 1000px;
+    background-color: #5EB9F0;
+    padding: 1vw 2vw 1vw 2vw;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/*===================
+    Formatação logo
+====================*/
+header{
+    display: flex;
+    justify-content: space-between;
+}
+header ul{
+    display: flex;
+}
+
+header ul li a{
+    padding: 0 2vw 0 2vw;
+    text-decoration: none;
+    color: #343F52;
+}
+
+header ul li a.Pagina-atual{
+    color: white;
+    background-color: #5EB9F0;
+    border-radius: 1000px;
+    padding: 1vw 2vw 1vw 2vw;
+}
+
+/*=======================
+    Formatação Banner
+=======================*/
+
+section.banner {
+    display: flex;
+    margin: 5vw 0 1vw 0;
+}
+
+section.banner div.text-banner h1{
+    font-size: 3rem;
+    color: #343F52;
+}
+
+section.banner div.text-banner h1 span{
+    color: #5EB9F0;
+}
+
+section.banner div.text-banner p{
+    margin: 2vw 0 2vw 0;
+    line-height: 1.5;
+}

@@ -34,55 +34,58 @@ separando-as por linha individual ('<br>'), obedecendo esta sequência:
 //ENTRADA
 
 const nome = prompt(`Informe o nome completo do empregado`);
-const cpf = prompt(`Informe o seu cpf:`);
+const cpf =  prompt(`Informe o seu cpf:`);
 let salarioBruto = Number(prompt(`Informe o seu salário bruto:`));
-const cargo = prompt(`Informe o código do seu cargo:`).toLowerCase();
+let codigoCargo = prompt(`Informe o código do seu código:`).toLowerCase();
 
 
 //PROCESSAMENTO
-let descontoPrevidencia,descontoContribuicao,percentualAumento;
-
-while (isNaN(salarioBruto) || salarioBruto < 0) {
-    salarioBruto = Number(prompt(`Informe o seu salário bruto:`));
-}
+let descontoPrevidencia,descontoContribuicao,valorAumento;
 
 
 if (salarioBruto >= 1412) {
     descontoPrevidencia = salarioBruto * 0.125;
-};
+} else{
+    descontoPrevidencia = 0;
+}
 
-if (cargo == "abc123") {
+if (codigoCargo == "abc123") {
     descontoContribuicao = salarioBruto * 0.075;
-    percentualAumento = salarioBruto * 0.08;
-} else if (cargo == '123abc' ) {
+    valorAumento = salarioBruto * 0.08;
+} else if (codigoCargo == "123abc" ) {
     descontoContribuicao = salarioBruto * 0.065;
-    percentualAumento = salarioBruto * 0.075;
-} else if (cargo == "xyz999") {
+    valorAumento = salarioBruto * 0.075;
+} else if (codigoCargo == "xyz999") {
     descontoContribuicao = salarioBruto * 0.05;
-    percentualAumento = salarioBruto * 0.09;
-} else if (cargo == "9a8b7c") {
+    valorAumento = salarioBruto * 0.09;
+} else if (codigoCargo == "9a8b7c") {
     descontoContribuicao = salarioBruto * 0.045;
-    percentualAumento = salarioBruto * 0.05;
-} else if (cargo == "log456") {
+    valorAumento = salarioBruto * 0.05;
+} else if (codigoCargo == "log456") {
     descontoContribuicao = salarioBruto * 0.03;
-    percentualAumento = salarioBruto * 0.06;
-} 
-
-const salarioFinalDescontado = salarioBruto - (descontoPrevidencia + descontoContribuicao); 
-const salarioFinalAumentado = salarioFinalDescontado + percentualAumento;
+    valorAumento = salarioBruto * 0.06;
+} else {
+    codigoCargo = false
+}
 
 //SAÍDA
 
-document.write(`
+if (codigoCargo !== false) {
+    
+    const salarioLiquido = salarioBruto - (descontoPrevidencia + descontoContribuicao); 
+    const salarioFinalAumentado = salarioLiquido + valorAumento;
+    
+    document.write(`
     <div style="text-align: center;">
         Nome: ${nome}, CPF: ${cpf} <br>
-        Desconto Contribuição Sindical: R$${descontoContribuicao.toFixed(2)} <br>
-        Desconto Previdência Social: R$${descontoPrevidencia.toFixed(2)} <br>
-        Salário Final: R$${salarioLiquido.toFixed(2)} <br>
-        Salário Antigo: R$ ${salarioBruto.toFixed(2)} <br>
+        Desconto Contribuição Sindical: R$ ${descontoContribuicao.toFixed(2).replace(".",",")} <br>
+        Desconto Previdência Social: R$ ${descontoPrevidencia.toFixed(2).replace(".",",")} <br>
+        Salário após descontos : R$ ${salarioLiquido.toFixed(2).replace(".",",")} <br>
+        Salário Antigo: R$ ${salarioBruto.toFixed(2).replace(".",",")}, Salário Final após acréscimos: R$ ${salarioFinalAumentado.toFixed(2).replace(".",",")}  <br>
     </div>
-`);
-
-
+`); 
+} else {
+    alert('Informe um código válido')
+}
 
 </script>
