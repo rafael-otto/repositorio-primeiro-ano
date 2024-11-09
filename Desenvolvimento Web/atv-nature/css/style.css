@@ -1,0 +1,112 @@
+/*=====================================
+            Formatação Geral
+======================================*/
+
+html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: calc(12px + 0.390625vw);
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+/*===============================
+    Formatação Cabeçalho
+===============================*/
+
+header {
+    background-color: #3B8686;
+    padding: 30px 10vw 30px 10vw;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li {
+    margin: 0 5vw  0 0;
+}
+header nav ul li:last-child {
+    margin-right: 0;
+}
+header nav .atual {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 20px 4px 20px;
+    border-radius: 16px;
+}
+header nav .atual:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+/*================================
+        Formatação Home
+================================*/
+section.banner {
+    background:linear-gradient(rgba(121, 189, 154, 0.2), rgba(121, 189, 154, 0.2)),
+    url(../src/image/back-banner.png) no-repeat center center;
+    background-size: 100% auto;
+    padding: 25vw 10vw 3vw 10vw;
+}
+section.banner h2 {
+    color: white;
+    font-size: 3rem;
+    width: 30%;
+    background: rgba(59, 134, 134, 0.5);
+    padding: 2vw;
+}
+
+/*===============================
+        Formatação etapas
+=================================*/
+
+section.etapas {
+    padding: 5vw 5vw 5vw 5vw;
+}
+
+section.etapas ul{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+section.etapas ul li span{
+    color: #3B8686;
+    font-size: 3rem;
+    margin: 2vw;
+}
+
+section.etapas ul li h3{
+    font-size: 1.5rem;
+    margin-bottom: 2vw;
+}
+
+section.etapas ul li p{
+    color: #747474;
+    line-height: 1.2;
+    font-size: 0.9rem;
+    margin-bottom: 3vw;
+}
+
+section.etapas ul li a{
+    background-color: #3B8686;
+    padding: 1vw 2vw 1vw 2vw;
+}
+
+/*============================
+    Formatação informações
+=============================*/
+
+section.informacoes{
+    padding: 2vw;
+    background-color: #3B8686;
+}
+
+section.informacoes ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.informacoes ul li{
+    text-align: center;
+}
