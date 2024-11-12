@@ -2,14 +2,16 @@
             Formatação Geral
 ======================================*/
 
-html{
+html {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: calc(12px + 0.390625vw);
 }
+
 a {
     color: white;
     text-decoration: none;
 }
+
 /*===============================
     Formatação Cabeçalho
 ===============================*/
@@ -18,36 +20,45 @@ header {
     background-color: #3B8686;
     padding: 30px 10vw 30px 10vw;
 }
+
 header nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
 header nav ul {
     display: flex;
 }
+
 header nav ul li {
-    margin: 0 5vw  0 0;
+    margin: 0 5vw 0 0;
 }
+
 header nav ul li:last-child {
     margin-right: 0;
 }
+
 header nav .atual {
     background: rgba(255, 255, 255, 0.2);
     padding: 4px 20px 4px 20px;
     border-radius: 16px;
 }
+
 header nav .atual:hover {
     background: rgba(255, 255, 255, 0.5);
 }
+
 /*================================
         Formatação Home
 ================================*/
 section.banner {
-    background:linear-gradient(rgba(121, 189, 154, 0.2), rgba(121, 189, 154, 0.2)),
-    url(../src/image/back-banner.png) no-repeat center center;
+    background: linear-gradient(rgba(121, 189, 154, 0.2), rgba(121, 189, 154, 0.2)),
+        url(../src/image/back-banner.png) no-repeat center center;
     background-size: 100% auto;
     padding: 25vw 10vw 3vw 10vw;
 }
+
 section.banner h2 {
     color: white;
     font-size: 3rem;
@@ -64,31 +75,35 @@ section.etapas {
     padding: 5vw 5vw 5vw 5vw;
 }
 
-section.etapas ul{
+section.etapas ul {
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-section.etapas ul li span{
+section.etapas ul li {
+    margin: 0 2vw 0 2vw;
+}
+
+section.etapas ul li span {
     color: #3B8686;
     font-size: 3rem;
     margin: 2vw;
 }
 
-section.etapas ul li h3{
+section.etapas ul li h3 {
     font-size: 1.5rem;
     margin-bottom: 2vw;
 }
 
-section.etapas ul li p{
+section.etapas ul li p {
     color: #747474;
     line-height: 1.2;
     font-size: 0.9rem;
     margin-bottom: 3vw;
 }
 
-section.etapas ul li a{
+section.etapas ul li a {
     background-color: #3B8686;
     padding: 1vw 2vw 1vw 2vw;
 }
@@ -97,9 +112,12 @@ section.etapas ul li a{
     Formatação informações
 =============================*/
 
-section.informacoes{
-    padding: 2vw;
+section.informacoes {
     background-color: #3B8686;
+    background: linear-gradient(rgba(121, 189, 154, 0.5), rgba(121, 189, 154, 0.5)),
+        url(../src/image/back-numeros.png) no-repeat center center;
+    background-size: 100% auto;
+    padding: 4vw 12vw 4vw 12vw;
 }
 
 section.informacoes ul {
@@ -107,6 +125,111 @@ section.informacoes ul {
     justify-content: space-between;
 }
 
-section.informacoes ul li{
-    text-align: center;
+section.informacoes ul li {
+    text-align: center; 
+}
+
+section.informacoes ul li span {
+    font-size: 3rem;
+    color: white;
+}
+
+section.informacoes ul li p {
+    font-size: 1.5rem;
+    padding: 1vw;
+    color: white;
+}
+
+/*==================================
+    Formatação possibilidades
+==================================*/
+
+section.possibilidades {
+    margin: 6.5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.possibilidades div.texto {
+    margin: 0 2vw 0 2vw;
+}
+
+section.possibilidades div.texto h2 {
+    font-size: 2rem;
+    margin-bottom: 3vw;
+    color: #0B486B;
+}
+
+section.possibilidades div.texto p {
+    color: #747474;
+    line-height: 1.2;
+    margin-bottom: 2vw;
+}
+
+section.possibilidades div.texto ul {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 7vw;
+}
+
+section.possibilidades div.texto ul li {
+    background-color: #0B486B;
+    padding: 1vw 2vw 1vw 2vw;
+}
+
+/*================================
+        Formatação footer
+================================*/
+
+footer {
+    background-color: #3B8686;
+    padding: 4vw 8vw 3vw 8vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*--------- redes sociais --------------*/
+
+footer div.redes-sociais ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+    margin-right: 5vw;
+}
+
+footer div.redes-sociais ul li span {
+    font-size: 2.5rem;
+}
+
+footer div.redes-sociais p {
+    color: white;
+}
+
+/*------------ contato ----------------*/
+
+footer div.contato ul li {
+    display: flex;
+}
+
+footer div.contato h4 {
+    color: white;
+    margin-bottom: 1vw;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+footer div.contato ul li span {
+    margin-right: 1vw;
+    color: white;
+}
+
+footer div.contato ul li p {
+    color: white;
+    margin-bottom: 0.5vw;
+}
+
+/*------ Formatação  mapa do site ----------------*/
+
+footer div.mapa-site ul li {
+    padding: 0.5vw;
 }
