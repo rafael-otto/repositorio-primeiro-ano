@@ -1,0 +1,106 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: LOJA DE VEÍCULOS
+    Crie os seguintes arrays:
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    
+    Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+
+    Apresente a lista final de cada tipo de veículo.
+    */
+
+    //ENTRADA
+
+    const tipoCarroUm = prompt(`Para adicionar o primeiro carro à lista primeiro informe o tipo do veículo:
+    Opções disponíveis: SUV, Sedan e Hatch`).toUpperCase();
+
+    //PROCESSAMENTO
+
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    let carroAdicionarUm = "";
+    let carroAdicionarDois = "";
+    let carroAdicionarTres = "";
+
+    switch (tipoCarroUm) {
+        case "SUV":
+            carroAdicionarUm = prompt(`Informe um Carro do tipo SUV:`);
+            carrosSUV.push(carroAdicionarUm);
+            break;
+        
+        case "SEDAN":
+            carroAdicionarUm = prompt(`Informe um Carro do tipo Sedan:`);
+            carrosSedan.push(carroAdicionarUm);
+
+            break
+
+        case "HATCH":
+            carroAdicionarUm = prompt(`Informe um Carro do tipo Hatch:`);
+            carrosHatch.push(carroAdicionarUm);
+            break
+        
+        default:
+            break;
+    }
+
+    const tipoCarroDois = prompt(`Para adicionar o segundo carro à lista primeiro informe o tipo do veículo:
+    Opções disponíveis: SUV, Sedan e Hatch`).toUpperCase();
+
+    switch (tipoCarroDois) {
+        case "SUV":
+            carroAdicionarDois = prompt(`Informe um Carro do tipo SUV:`);
+            carrosSUV.push(carroAdicionarDois);
+            break;
+        
+        case "SEDAN":
+            carroAdicionarDois = prompt(`Informe um Carro do tipo Sedan:`);
+            carrosSedan.push(carroAdicionarDois);
+
+            break
+
+        case "HATCH":
+            carroAdicionarDois = prompt(`Informe um Carro do tipo Hatch:`);
+            carrosHatch.push(carroAdicionarDois);
+            break
+        
+        default:
+            break;
+    }
+
+    const tipoCarroTres = prompt(`Para adicionar o terceiro carro à lista primeiro informe o tipo do veículo:
+    Opções disponíveis: SUV, Sedan e Hatch`).toUpperCase();
+
+    switch (tipoCarroTres) {
+        case "SUV":
+            carroAdicionarTres = prompt(`Informe um Carro do tipo SUV:`);
+            carrosSUV.push(carroAdicionarTres);
+            break;
+        
+        case "SEDAN":
+            carroAdicionarTres = prompt(`Informe um Carro do tipo Sedan:`);
+            carrosSedan.push(carroAdicionarTres);
+
+            break
+
+        case "HATCH":
+            carroAdicionarTres = prompt(`Informe um Carro do tipo Hatch:`);
+            carrosHatch.push(carroAdicionarTres);
+            break
+        
+        default:
+            break;
+    }
+
+    //SAÍDA
+
+    document.write(`Lista atual: <br>
+    SUV: ${carrosSUV.join(", ")} <br>
+    Sedan: ${carrosSedan.join(", ")} <br>
+    Hatch: ${carrosHatch.join(", ")}
+    `)
+
+</script>

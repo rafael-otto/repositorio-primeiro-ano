@@ -1,0 +1,63 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: ARRAY EM ORDEM DECRESCENTE
+    Peça para um usuário inserir três números. Crie um array com os três números, colocando-os em ordem decrescente. Para ordenar, NÃO use o método reverse();
+    Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
+    */
+
+    //ENTRADA
+    const numUm = prompt("Informe o primeiro número:");
+    const numDois = prompt("Informe o segundo número:");
+    const numTres = prompt("Informe o terceiro número:");
+
+    //PROCESSAMENTO
+
+    let ordemNumero = [];
+
+    if ((numUm > numDois) && ( numUm > numTres) && (numDois > numTres)) {
+        ordemNumero.push(numTres);
+        ordemNumero.push(numDois);
+        ordemNumero.push(numUm);
+
+        alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
+
+    } else if ((numUm > numDois) && ( numUm > numTres) && (numTres > numDois)) {
+        ordemNumero.push(numDois);
+        ordemNumero.push(numTres);
+        ordemNumero.push(numUm);
+
+        alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
+
+    }else if ((numDois > numUm) && (numDois > numTres) && (numUm > numTres)) {
+        ordemNumero.push(numTres);
+        ordemNumero.push(numUm);
+        ordemNumero.push(numDois);
+
+        alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
+
+    }else if ((numDois > numUm) && (numDois > numTres) && (numTres > numUm)) {
+        ordemNumero.push(numUm);
+        ordemNumero.push(numTres);
+        ordemNumero.push(numDois);
+
+        alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
+
+    }else if ((numTres > numUm) && (numTres > numDois) && (numUm > numDois)) {
+        ordemNumero.push(numDois);
+        ordemNumero.push(numUm);
+        ordemNumero.push(numTres);
+
+        alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
+
+    }else  {
+        ordemNumero.push(numUm);
+        ordemNumero.push(numDois);
+        ordemNumero.push(numTres);
+
+        alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
+    };
+
+    //SAÍDA
+
+</script>
