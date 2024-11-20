@@ -7,57 +7,49 @@
     */
 
     //ENTRADA
-    const numUm = prompt("Informe o primeiro número:");
-    const numDois = prompt("Informe o segundo número:");
-    const numTres = prompt("Informe o terceiro número:");
+    const numUm = Number(prompt("Informe o primeiro número:"));
+    const numDois = Number(prompt("Informe o segundo número:"));
+    const numTres = Number(prompt("Informe o terceiro número:"));
 
     //PROCESSAMENTO
 
     let ordemNumero = [];
 
-    if ((numUm > numDois) && ( numUm > numTres) && (numDois > numTres)) {
-        ordemNumero.push(numTres);
-        ordemNumero.push(numDois);
+    // Verificar a ordem decrescente
+    if ((numUm >= numDois) && (numUm >= numTres)) {
         ordemNumero.push(numUm);
 
-        alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
+        if (numDois >= numTres) {
+            ordemNumero.push(numDois);
+            ordemNumero.push(numTres);
+        } else {
+            ordemNumero.push(numTres);
+            ordemNumero.push(numDois);
+        }
 
-    } else if ((numUm > numDois) && ( numUm > numTres) && (numTres > numDois)) {
-        ordemNumero.push(numDois);
-        ordemNumero.push(numTres);
-        ordemNumero.push(numUm);
-
-        alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
-
-    }else if ((numDois > numUm) && (numDois > numTres) && (numUm > numTres)) {
-        ordemNumero.push(numTres);
-        ordemNumero.push(numUm);
+    } else if ((numDois >= numUm) && (numDois >= numTres)) {
         ordemNumero.push(numDois);
 
-        alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
+        if (numUm >= numTres) {
+            ordemNumero.push(numUm);
+            ordemNumero.push(numTres);
+        } else {
+            ordemNumero.push(numTres);
+            ordemNumero.push(numUm);
+        }
 
-    }else if ((numDois > numUm) && (numDois > numTres) && (numTres > numUm)) {
-        ordemNumero.push(numUm);
-        ordemNumero.push(numTres);
-        ordemNumero.push(numDois);
-
-        alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
-
-    }else if ((numTres > numUm) && (numTres > numDois) && (numUm > numDois)) {
-        ordemNumero.push(numDois);
-        ordemNumero.push(numUm);
+    } else {
         ordemNumero.push(numTres);
 
-        alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
-
-    }else  {
-        ordemNumero.push(numUm);
-        ordemNumero.push(numDois);
-        ordemNumero.push(numTres);
-
-        alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
-    };
+        if (numUm >= numDois) {
+            ordemNumero.push(numUm);
+            ordemNumero.push(numDois);
+        } else {
+            ordemNumero.push(numDois);
+            ordemNumero.push(numUm);
+        }
+    }
 
     //SAÍDA
-
+    alert(`A ordem decrescente é ${ordemNumero.join(" - ")}`);
 </script>
