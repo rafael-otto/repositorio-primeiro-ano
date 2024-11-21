@@ -22,14 +22,16 @@
 
     }
 
-    function comparandoNumeros(a, b) {
-        return a - b;
-    }
-
     //SAÍDA
 
-    document.write(`Lista completa: ${listaDeNumeros.join(" - ")} <br>
-    Números Pares: ${numerosPares.sort(comparandoNumeros).join(" - ")}
-    Números Impares:`);
+    document.write(`Crescente: <br>
+    Lista completa: ${listaDeNumeros.join(" - ")} <br>
+    Números Pares: ${numerosPares.join(" - ")} <br>
+    Números Impares:${numerosImpares.join(" - ")} <br>
+    <br>
+    Decrescente: <br>
+    Lista completa: ${listaDeNumeros.join(" - ")} <br>
+    Números Pares: ${numerosPares.reverse().join(" - ")} <br>
+    Números Impares:${numerosImpares.reverse().join(" - ")}`);
 
 </script>
