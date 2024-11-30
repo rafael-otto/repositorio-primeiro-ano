@@ -1,0 +1,17 @@
+    <script>
+
+        let numerosVistos = Number(prompt(`Quantos números da sequência de Fibonacci você deseja ver:`));
+        let fibonacciNumeros = [0, 1];
+
+        for (let contador = 3; contador < numerosVistos; contador++) {
+        
+            let cortandoUltimos = fibonacciNumeros.slice(-2);
+
+            fibonacciNumeros.push(cortandoUltimos[0] + cortandoUltimos[1]);
+
+        }
+
+        document.write(fibonacciNumeros);
+        
+
+    </script>

@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Faça um programa que peça para o usuário informar um número. Identifique se o número fornecido pelo usuário é um número primo e apresente na tela.
+    */
+
+    //ENTRADA
+    const numInfo = Number(prompt(`Informe um número:`));
+
+    //PROCESSAMENTO
+
+    let numPrimo = 0;
+    let ePrimo = true;
+
+    if (numInfo > 1) {
+        for (let validacao = 2; validacao < numInfo; validacao++) {
+
+            if (numInfo % validacao == 0) {
+                ePrimo = false
+            }
+
+        }
+
+        if (ePrimo) {
+            document.write(`O número ${numInfo} é primo!`);
+        } else {
+            document.write(`O número ${numInfo} não é primo!`);
+        }
+    } else {
+        document.write(`O número ${numInfo} não é primo!`);
+    }
+    //SAÍDA
+
+</script>

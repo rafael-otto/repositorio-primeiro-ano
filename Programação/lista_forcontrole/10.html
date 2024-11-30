@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Peça para o programa perguntar ao professor regente o nome dos três candidatos a representante da sala.
+    Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
+    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
+    */
+
+    //ENTRADA
+    let candidatos = [];
+
+    for (let numerocandidatos = 0; numerocandidatos < 3; numerocandidatos++) {
+        let nomescandidatos = prompt(`Informe o nome do candidato ${numerocandidatos + 1}:`);
+        
+        candidatos.push(nomescandidatos);
+    }
+
+    const alunosVotantes = Number(prompt(`Informe a quantidade de alunos votantes:`));
+
+    //PROCESSAMENTO
+
+    let candidatoUm = 0;
+    let candidatoDois = 0;
+    let candidatoTres = 0;
+    let votosNulos = 0
+
+    for (let votos = 0; votos < alunosVotantes; votos++) {
+        let votou = Number(prompt(`Em qual candidato você deseja votar?? ${candidatos[0]} (1), ${candidatos[1]} (2), ${candidatos[2]} (3)`));
+
+        if (votou == 1) {
+            candidatoUm++;
+        } else if (votou == 2) {
+            candidatoDois++;
+        } else if (votou == 3) {
+            candidatoTres++;
+        } else {
+            votosNulos++;
+        } 
+    }
+
+
+    //SAÍDA
+    document.write(`O candidato 1 recebeu: ${candidatoUm} votos ou seja ${(candidatoUm / alunosVotantes) * 100}% <br>
+    O candidato 2 recebeu: ${candidatoDois} votos ou seja ${(candidatoDois / alunosVotantes) * 100}% <br>
+    O candidato 3 recebeu: ${candidatoTres} votos ou seja ${(candidatoTres / alunosVotantes) * 100}% <br>
+    A quantidade de votos nulos foi: ${votosNulos} ou seja ${(votosNulos / alunosVotantes) * 100}%`);
+
+</script>
