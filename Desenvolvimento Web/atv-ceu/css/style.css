@@ -10,11 +10,11 @@ html {
         Formatação Cabeçalho
 ===================================*/
 
-header nav{
+header nav {
     display: flex;
     justify-content: space-between;
     padding: 2vw 2vw 2vw 2vw;
-    border-bottom: 1px #C4C4C4 solid;
+    border-bottom: 1px #C4C4C480 solid;
     align-items: center;
 }
 
@@ -38,13 +38,13 @@ header nav ul li a {
     padding: 15px 20px 15px 20px;
 }
 
-span{
+span {
     color: #1090CB;
 }
 
 .atual {
     color: #1090CB;
-}   
+}
 
 .contato {
     background-color: #1090CB;
@@ -63,7 +63,7 @@ section.banner {
 
 /*Formatação texto*/
 
-section.banner div.texto{
+section.banner div.texto {
     padding: 7vw 0 6vw 6vw;
 }
 
@@ -72,32 +72,32 @@ section.banner div.texto h2 {
     font-weight: 800;
 }
 
-section.banner div.texto p{
+section.banner div.texto p {
     color: #5c5c5c;
     padding: 4vw 0 4vw 0;
 }
 
-section.banner div.texto ul{
+section.banner div.texto ul {
     display: flex;
 }
 
-section.banner div.texto ul li{
+section.banner div.texto ul li {
     margin: 1vw 2vw 1vw 0;
 }
 
-section.banner div.texto ul li a{
+section.banner div.texto ul li a {
     padding: 15px 35px 15px 35px;
     text-decoration: none;
     border-radius: 10px;
     font-size: 1.2rem;
 }
 
-section.banner div.texto ul li:first-child a{
+section.banner div.texto ul li:first-child a {
     background-color: #1090CB;
     color: white;
 }
 
-section.banner div.texto ul li:last-child a{
+section.banner div.texto ul li:last-child a {
     background-color: white;
     color: #1090CB;
     border: #1090CB 1.5px solid;
@@ -113,42 +113,42 @@ section.banner div.imagem {
         Formatação Serviços
 ===================================*/
 
-section.servicos{
-    border-bottom: 1px #5c5c5c solid;
+section.servicos {
+    border-bottom: 1px #C4C4C480 solid;
     padding: 3vw 5vw 3vw 5vw;
     align-items: center;
 }
 
-section.servicos ul{
+section.servicos ul {
     display: flex;
     justify-content: space-between;
 }
 
-section.servicos ul li{
+section.servicos ul li {
     display: flex;
 }
 
 /*  Formatação imagem   */
 
-section.servicos div img{
+section.servicos div img {
     padding: 1vw;
     margin-right: 1vw;
     border-radius: 20px;
 }
 
-section.servicos div.web img{
+section.servicos div.web img {
     background-color: #EFEAFF;
 }
 
-section.servicos div.seo img{
+section.servicos div.seo img {
     background-color: #ECFFDA;
 }
 
-section.servicos div.vr img{
+section.servicos div.vr img {
     background-color: #DAE6FF;
 }
 
-section.servicos div.mobile img{
+section.servicos div.mobile img {
     background-color: #FFE5DA;
 }
 
@@ -158,7 +158,7 @@ section.servicos div.texto {
     margin-top: 1.1vw;
 }
 
-section.servicos div.texto h3{
+section.servicos div.texto h3 {
     font-weight: 900;
     margin-bottom: 0.3vw;
 }
@@ -176,12 +176,12 @@ section.kodex div.inicio {
     text-align: center;
 }
 
-section.kodex div.inicio h2{
+section.kodex div.inicio h2 {
     font-weight: 900;
     font-size: 1.8rem;
 }
 
-section.kodex div.inicio p{
+section.kodex div.inicio p {
     color: #868686;
     margin: 2vw 18vw 0 18vw;
     line-height: 1.4;
@@ -198,7 +198,7 @@ section.kodex div.partes h4 {
     padding: 2vw 5vw 2vw 5vw;
 }
 
-section.kodex div.partes p{
+section.kodex div.partes p {
     color: #545454;
     padding: 2vw 5vw 2vw 5vw;
 }
@@ -232,11 +232,11 @@ section.cards ul li h5 {
     font-weight: 900;
 }
 
-section.cards ul li p{
+section.cards ul li p {
     margin: 2vw 2vw 3vw 2vw;
 }
 
-section.cards ul li a{
+section.cards ul li a {
     padding: 1vw;
     border-radius: 10px;
     text-decoration: none;
@@ -246,11 +246,11 @@ section.cards ul li:first-child {
     background-color: #F4F4F4;
 }
 
-section.cards ul li:first-child p{
+section.cards ul li:first-child p {
     color: #545454;
 }
 
-section.cards ul li:first-child a{
+section.cards ul li:first-child a {
     color: white;
     background-color: #1090CB;
 }
@@ -259,15 +259,15 @@ section.cards ul li:last-child {
     background-color: #1090CB;
 }
 
-section.cards ul li:last-child h5{
+section.cards ul li:last-child h5 {
     color: white;
 }
 
-section.cards ul li:last-child p{
+section.cards ul li:last-child p {
     color: white;
 }
 
-section.cards ul li:last-child a{
+section.cards ul li:last-child a {
     color: #1090CB;
     background-color: white;
 }
@@ -275,3 +275,93 @@ section.cards ul li:last-child a{
 /*==================================
         Formatação Forms
 ===================================*/
+
+section.forms {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #1090CB20;
+    padding: 5vw;
+}
+
+section.forms form h2 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin: 3vw 0 5vw 0;
+}
+
+section.forms form ul li input.email {
+    padding: 2vw 20vw 2vw 3vw;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: rgba(120, 120, 120, 1);
+}
+
+section.forms form ul li input.SUBSCRIBE {
+    padding: 2vw 3vw 2vw 3vw;
+    margin-left: 1vw;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+    font-size: 1rem;
+}
+
+/*==================================
+        Formatação Rodapé
+===================================*/
+
+footer {
+    padding: 5vw 0 5vw 0;
+}
+
+footer div {
+    padding: 0 3vw 0 3vw;
+}
+
+/*  Parte Superior  */
+
+footer div.superior {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px rgba(210, 210, 210, 1) solid;
+}
+
+footer div.superior h6 {
+    color: rgba(0, 50, 155, 1);
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+footer div.superior div.info-empresa p {
+    margin: 1.5vw 0 1.5rem 0;
+    color: rgba(81, 81, 81, 1);
+}
+
+footer div.superior div.mapa-site p {
+    color: black;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+footer div.superior div.mapa-site ul li {
+    margin-bottom: 0.8rem;
+}
+
+footer div.superior div.mapa-site ul li a {
+    color: rgba(81, 81, 81, 1);
+    text-decoration: none;
+}
+
+/*  Parte Inferior*/
+
+footer div.inferior {
+    text-align: center;
+}
+
+footer div.inferior p {
+    color: rgba(104, 104, 104, 1);
+    padding-top: 3vw;
+    font-size: 0.9rem;
+}
