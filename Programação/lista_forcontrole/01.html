@@ -15,24 +15,19 @@
     
     //PROCESSAMENTO
 
-    let letrasRepetidas = [];
     let letrasConferidas = [];
 
     for (let posicaoLetra = 0; posicaoLetra < listaDeLetras.length; posicaoLetra++) {
         
         let letraUnica = listaDeLetras[posicaoLetra].toLowerCase();
 
-        
-        if (letrasConferidas.includes(letraUnica) && (letrasRepetidas.includes(letraUnica) == false)) {
-            letrasRepetidas.push(letraUnica);
-        } else {
-            
+        if (letrasConferidas.includes(letraUnica) == false) {          
             letrasConferidas.push(letraUnica);
         }
     }
 
     
-    alert(`${letrasRepetidas.sort().join(" - ")}`);
+    alert(`${letrasConferidas.sort().join(" - ")}`);
     
     //SAÍDA
 </script>
