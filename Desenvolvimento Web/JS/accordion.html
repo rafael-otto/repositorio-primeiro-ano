@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+</head>
+
+<body>
+    <main>
+        <ul>
+            <li>
+                <h2>
+                    <span>+</span> Festa natalina
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim error maxime expedita blanditiis
+                    itaque, totam asperiores, assumenda necessitatibus saepe provident quibusdam. Maxime magnam nihil
+                    distinctio impedit explicabo, unde odit aspernatur!</p>
+            </li>
+            <li>
+                <h2>
+                    <span>+</span> Festa fim de ano
+                </h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit deserunt animi deleniti et
+                    praesentium dolor sapiente velit placeat cum voluptas. Minus sequi voluptatem rerum beatae error
+                    odit aliquid reiciendis maiores?</p>
+            </li>
+            <li>
+                <h2>
+                    <span>+</span> Festa de Carnaval
+                </h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, quas voluptate fugiat totam aut modi
+                    voluptates natus dolores. Sint blanditiis fuga libero amet facere officia. Mollitia corporis fuga
+                    ducimus saepe?</p>
+            </li>
+        </ul>
+    </main>
+    <style>
+        h2 {
+            color: white;
+            background-color: blue;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: 900;
+        }
+        span {
+            background-color: white;
+            color: blue;
+            padding: 1px 7px 1px 7px;
+            border-radius: 10px;
+        }
+        ul li {
+            list-style: none;
+        }
+        ul li p {
+            display: none;
+            background-color: lightblue;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+    <script>
+        let elementos = document.querySelectorAll('h2');
+        elementos.forEach((item) => {
+            item.addEventListener("click", function (e) {
+            console.log("Foi");
+            let estado = this.parentNode.querySelector("p").style.display;
+            if (estado == "block") {
+                this.parentNode.querySelector("p").style.display = "none";
+                this.querySelector("span").innerText = "+";
+            } else {
+            this.parentNode.querySelector("p").style.display = "block";
+            this.querySelector("span").innerText = "-";
+            }
+        })
+        });
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Airbnb</title>
+</head>
+
+<body>
+    <main>
+        <form action="#">
+            <fieldset>
+                <legend>Calculadora Airbnb</legend>
+                <p>
+                    <label for="preco">Preço</label> <br>
+                    <input type="number" id="preco">
+                </p>
+                <p>
+                    <label for="qtd">Quantidade de diárias</label> <br>
+                    <input type="number" id="qtd">
+                </p>
+                <p>
+                    <label for="taxa">Taxa de Limpeza</label> <br>
+                    <input type="number" id="taxa">
+                </p>
+                <p>
+                    <input type="button" value="Enviar" id="btn-enviar">
+                </p>
+                <div  id="total">
+                    Valor total: R$ <span></span>
+                </div>
+            </fieldset>
+        </form>
+        
+    </main>
+    <style>
+        form {
+            padding: 8vw 35vw 0 35vw;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        form fieldset {
+            box-shadow: -5px 0 50px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            border: none;
+        }
+        form fieldset legend {
+            display: none;
+        }
+        form fieldset p input {
+            margin-top: 1vw;
+        }
+        form fieldset p {
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+        form fieldset input[type = "button"] {
+            background-color: crimson;
+            color: white;
+            border: none;
+            padding: 1vw 3vw 1vw 3vw;
+            border-radius: 10px;
+            font-size: 1.1rem;  
+        }
+        #total {
+            font-size: 1.1rem;
+        }
+    </style>
+    <script>
+        let btn = document.getElementById("btn-enviar");
+        btn.addEventListener("click", function (e) {
+            let preco = document.getElementById("preco").value;
+            console.log(preco);
+            let qtd = document.getElementById("qtd").value;
+            console.log(qtd);
+            let taxa = document.getElementById("taxa").value;
+            console.log(taxa);
+            let total = preco * qtd + parseFloat(taxa);
+            console.log(total);
+            let mensagem = document.getElementById("total");
+            mensagem.innerText = " Valor total: R$" + total;
+        });
+    </script>
+</body>
+
+</html>
