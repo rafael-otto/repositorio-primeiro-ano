@@ -2,7 +2,8 @@
 <script>
     /*
     PROBLEMA: PESQUISA DE IDADE
-    Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, sexo (M/F) e salário. Faça um programa que calcule e mostre:
+    Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, sexo (M/F) e salário.
+    Faça um programa que calcule e mostre:
 
     a) A média dos salários do grupo;
     b) A maior e a menor idade do grupo;
@@ -14,8 +15,48 @@
 
     //ENTRADA
 
+    let totalPessoas = Number(prompt("Informe a quantidade de habitantes na região:"));
+    let salarioTotal = 0, mediaSalarial = 0 ,maiorIdade = 0 ,menorIdade = 0,qtMulheres = 0;
+    let idades = []
+    let salarios = []
+    let pessoas = []
 
     //PROCESSAMENTO
+    do {
+        const pessoa = {
+            idade: Number(prompt("Informe sua idade:")),
+            sexo: prompt("Informe seu sexo (f - feminino; m - masculino):").toLowerCase(),
+            salario: Number(prompt("Informe seu salario:")),
+        }
+        pessoas.push(pessoa);
+        totalPessoas--
+    } while (totalPessoas > 0);
+
+    console.log(pessoas)
+        
+    for (pessoa of pessoas) {
+        console.log(pessoa)
+        mediaSalarial += pessoa.salario
+        idades.push(pessoa.idade)
+        salarios.push(pessoa.salario)
+        if (pessoa.sexo === "f") qtMulheres++;
+    }
+
+
+    let menorSalario = salarios.sort((a,b) => a-b)[0]
+    
+    const pessoaMenorSalario = pessoas.find(pessoa => pessoa.salario == menorSalario)
+    
+    mediaSalarial = mediaSalarial / pessoas.length; 
+    maiorIdade = idades.sort((a,b) => b-a)[0];
+    menorIdade = idades.sort((a,b) => a-b)[0];
+    
+    console.log(mediaSalarial,qtMulheres, maiorIdade, menorIdade, pessoaMenorSalario) 
+    alert(`
+    A média dos salários do grupo: ${mediaSalarial};
+    A maior e a menor idade do grupo ${maiorIdade, menorIdade};
+    A quantidade de mulheres na região ${qtMulheres};
+    A idade e o sexo da pessoa que possui o menor salário: ${pessoaMenorSalario.idade}, ${pessoaMenorSalario.sexo === "f" ? "Feminino" : "Masculino"};`)
 
 
     //SAÍDA

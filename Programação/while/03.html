@@ -11,11 +11,30 @@
     */
 
     //ENTRADA
-
-
+    let nome, idade, salario, sexo, civil;
+    
+    
     //PROCESSAMENTO
+    do {
+        nome = prompt("Informe seu nome:").trim();
+        idade = Number(prompt("Informe sua idade"));
+        salario =  Number(prompt("Informe seu salário"));
+        sexo = prompt("Informe seu sexo(f - feminino; m - masculino)").toLowerCase();
+        civil = prompt("Informe seu sexo(s - solteiro; c - casado; v - viúvo; d - divorciado)");
 
+    let erros = [
+        nome.length < 3 && "Nome deve ter pelo menos 3 caracteres.",
+        (idade < 0 || idade > 150) && "Idade deve estar entre 0 e 150.",
+        salario < 0 && "Salário deve ser um número positivo.",
+        !["f", "m"].includes(sexo) && "Sexo inválido! Use 'f' ou 'm'.",
+        !["s", "c", "v", "d"].includes(civil) && "Estado civil inválido! Use 's', 'c', 'v' ou 'd'."
+    ].filter(Boolean);
 
+    alert(erros.join("\n")); 
+
+    } while (erros);
+    
+    
     //SAÍDA
 
 </script>

@@ -22,7 +22,51 @@
     //ENTRADA
 
 
+    const votos = {
+        mariazinha: 0,
+        joaozinho: 0,
+        nulo: 0,
+        branco: 0,
+    }
+    let voto;
+
     //PROCESSAMENTO
+
+    while (true) {
+        voto = Number(prompt(` Escolha seu voto:
+    As opções são:
+    1. Candidato Joãozinho
+    2. Candidato Mariazinha
+    3. Nulo
+    4. Branco`));
+
+        if (voto === 0) {
+            const votosTotais = votos.mariazinha + votos.joaozinho + votos.nulo + votos.branco;
+            let candidatoVencedor = "";
+
+            if (votos.mariazinha > votos.joaozinho) {
+                candidatoVencedor = "candidato vencedor é Mariazinha";
+            } else if (votos.mariazinha < votos.joaozinho) {
+                candidatoVencedor = "candidato vencedor é Joãnzinho";
+            } else {
+                candidatoVencedor = "Houve empate";
+            }
+
+            alert(`Votos joãozinho: ${(votos.joaozinho)};
+        Votos Mariazinha: ${(votos.mariazinha)};
+        Votos Nulos: ${((votos.nulo / votosTotais) * 100).toFixed(1)}%;
+        Votos Brancos: ${((votos.branco / votosTotais) * 100).toFixed(1)}%;
+        Candidato vencedor: ${candidatoVencedor}` )
+
+        }
+        if (voto === 1) votos.joaozinho++;
+        if (voto === 2) votos.mariazinha++;
+        if (voto === 3) votos.nulo++;
+        if (voto === 4) votos.branco++;
+        if (voto > 4 || voto < 0) alert("Valor inválido");
+
+    };
+
 
 
     //SAÍDA
