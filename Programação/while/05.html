@@ -6,22 +6,19 @@
     solicite novamente a senha. Se a senha entrada for a correta, deverá ser apresentada a mensagem “Senha Correta”, caso contrário, “Senha Incorreta”.
     */
 
-    // ENTRADA
-    let senha;
-    let contarDigitos;
+    //ENTRADA
+    
+    let password;
 
-    // PROCESSAMENTO
+    //PROCESSAMENTO
+
     do {
-        senha = prompt('Informe uma senha de quatro números inteiros');
-        
-        contarDigitos = senha.length;
-        
-        if (contarDigitos !== 4) {
-            alert(`Senha incorreta`);
-        }
-                    
-    } while (contarDigitos !== 4);
+        if (password !== undefined) alert("Senha Incorreta");
 
-    // SAÍDA
-    alert('Senha Correta!');
+        password = prompt("Informe uma senha").replaceAll(" ", "");
+
+    } while (!/^\d{4}$/.test(password));
+
+    //SAÍDA
+    alert("Senha Correta");
 </script>
