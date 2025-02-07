@@ -8,10 +8,17 @@
     */
 
     //ENTRADA
+    let number = prompt("Informe um número");
+    let reverseNumber = "";
+    
+  //PROCESSAMENTO
+    const arrayNumber = Array.from(number);
+    while (arrayNumber.length !== 0) {
+    reverseNumber += arrayNumber.slice(-1);
+    arrayNumber.pop()
+    }
+    alert(`Valor invertido: ${reverseNumber}`)
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
+  //SAÍDA
 
 </script>
