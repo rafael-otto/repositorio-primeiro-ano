@@ -2,15 +2,60 @@
     const temperaturas = [22, 25, 19, 30, 28, 24, 27];
     //Problema: Temperaturas
     /*
-    1. Criar uma função calcularMedia(temperaturas) para retornar a temperatura média.
-    2. Criar uma função encontrarMaisQuente(temperaturas) para retornar a maior temperatura registrada.
-    3. Criar uma função encontrarMaisFria(temperaturas) para retornar a menor temperatura registrada.
+    1. Criar uma função calcularMedia(temperatura) para retornar a temperatura média.
+    2. Criar uma função encontrarMaisQuente(temperatura) para retornar a maior temperatura registrada.
+    3. Criar uma função encontrarMaisFria(temperatura) para retornar a menor temperatura registrada.
     4. Criar um loop (while) para exibir um menu e permitir ao usuário escolher uma opção até decidir sair (opção 0).
     */
 
     //Entrada
+    let opcao;
+    let media = 0;
 
     //Processamento
+    while (opcao != 0) {
+        opcao = Number(prompt(`Informe um número para selecionar uma opção:
+    0. Sair do programa
+    1. Encontrar a temperatura média
+    2. Encontrar a maior temperatura
+    3. Encontrar a menor temperatura`));
+
+        switch (opcao) {
+
+            case 1:
+                function calcularMedia(temperatura) {
+                    for (let grau of temperaturas) {
+                        media += grau;
+                    }
+                    media = media / temperaturas.length;
+                    alert(`A temperatura média foi de ${media} graus`);
+                }
+                calcularMedia()
+                break;
+
+            case 2:
+                function encontrarMaisQuente(temperatura) {
+                    temperaturas.sort((a, b) => b - a);
+                    alert(`A maior temperatura registrada foi de ${temperaturas[0]} graus`);
+                }
+                encontrarMaisQuente()
+                break;
+
+            case 3:
+                function encontrarMaisFria(temperatura) {
+                    temperaturas.sort((a, b) => a - b);
+                    alert(`A menor temperatura registrada foi de ${temperaturas[0]} graus`);
+                }
+                encontrarMaisFria()
+                break;
+
+            default:
+                opcao = 0;
+                break;
+        }
+
+    }
 
     //Saída
+    alert(`Programa encerrado!`);
 </script>
