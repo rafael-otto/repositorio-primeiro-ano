@@ -1,0 +1,64 @@
+<script>
+    let listaCompras = ["Arroz", "Feijão", "Leite"];
+    //Problema: Lista de Compras
+    /*
+    1. Criar uma função adicionarItem(item) que adiciona um novo item à lista.
+    2. Criar uma função removerItem(item) que remove um item da lista se ele existir.
+    3. Criar uma função listarItens() que exibe todos os itens da lista.
+    4. Criar um loop(while) para permitir ao usuário interagir com as opções até escolher sair.
+    */
+
+    //Entrada
+    let opcao;
+    let item;
+    let localizar;
+
+    //Processamento
+    while (opcao != 4) {
+        opcao = Number(prompt(`Informe um número para selecionar uma opção:
+    1. Adicionar um novo item à lista 
+    2. Remover um item da lista
+    3. Exibir todos os itens da lista
+    4. Sair do programa`));
+
+        switch (opcao) {
+            
+            case 1:
+                function adicionarItem(item) {
+                    item = prompt(`Informe um item para adicionar ele à lista de compras:`);
+                    listaCompras.push(item);
+                }
+                adicionarItem();
+                break;
+
+            case 2:
+
+                function removerItem(item) {
+                    item = prompt(`Informe um item para remover ele da lista de compras:
+                    Lista Atual: ${listaCompras.join(" - ")}
+                    Escreva o item exatamente como ele foi apresentado`);
+                    
+                    localizar = listaCompras.indexOf(item)
+                    listaCompras.splice(localizar, 1);
+                }
+                removerItem();
+                break;
+
+            case 3:
+                function listarItens(item) {
+                    alert(`A lista de compras é: ${listaCompras.sort((a, b) => a - b).join(" - ")}`);
+                }
+                listarItens();
+                break;
+
+            default:
+                opcao = 4;
+                break;
+        }
+
+    }
+
+    //Saída
+    alert(`Programa encerrado!`);
+
+</script>
