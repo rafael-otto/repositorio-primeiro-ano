@@ -14,8 +14,104 @@
     */
 
     //Entrada
+    let opcao;
+    let quartosDisponiveis = [];
+    let numeroReserva;
+    let reservaCancelada;
+    let cancelado = false;
+    let faturamento = 0;
 
     //Processamento
+    while (opcao !== 0) {
+        opcao = Number(prompt(`Informe um número para selecionar uma opção:
+    0. Sair do programa
+    1. Listar os quartos disponíveis
+    2. Reservar um quarto
+    3. Cancelar uma reserva
+    4. Calcular o faturamento`));
 
+        switch (opcao) {
+            case 1:
+                function listarQuartosDisponiveis() {
+                    
+                    for (let contador = 0; contador < quartos.length; contador++) {
+                        
+                        if (quartos[contador].disponivel) {
+                            
+                            quartosDisponiveis += `Número: ${quartos[contador].numero}, Tipo: ${quartos[contador].tipo}, Preço: R$${quartos[contador].preco}\n`;
+                        }
+                    }
+
+                    if (quartosDisponiveis.length > 0) {
+                        alert(`Os quartos disponíveis são:\n${quartosDisponiveis}`);
+                    } else {
+                        alert(`Todos os quartos estão ocupados!`);
+                    }
+                }
+                listarQuartosDisponiveis();
+                break;
+
+            case 2:
+                function reservarQuarto() {
+                    numeroReserva = Number(prompt(`Informe o número do quarto que você deseja reservar:`));
+                    
+                    for (let contador = 0; contador < quartos.length; contador++) {
+                        
+                        if (quartos[contador].numero == numeroReserva) {
+                            
+                            if (quartos[contador].disponivel) {
+                                quartos[contador].disponivel = false;
+                                alert(`O quarto ${numeroReserva} está reservado.`);
+
+                            } else {
+                                alert(`O quarto ${numeroReserva} não está disponível.`);
+                            }
+                        }
+                    }
+                }
+                reservarQuarto();
+                break;
+
+            case 3:
+                function cancelarReserva() {
+                    reservaCancelada = Number(prompt(`Informe o número do quarto para cancelar a reserva:`));
+                    
+                    for (let contador = 0; contador < quartos.length; contador++) {
+                        
+                        if (quartos[contador].numero == reservaCancelada) {
+                            
+                            if (quartos[contador].disponivel == false) {
+                                quartos[contador].disponivel = true;
+                                alert(`A reserva do quarto ${reservaCancelada} cancelada.`);
+                            } else {
+                                alert(`O quarto ${reservaCancelada} não está reservado.`);
+                            }
+                        }
+                    }
+                }
+                cancelarReserva();
+                break;
+
+            case 4:
+                function calcularFaturamento() {
+                    
+                    for (let contador = 0; contador < quartos.length; contador++) {
+                        
+                        if (quartos[contador].disponivel) {
+                            faturamento += quartos[contador].preco;
+                        }
+                    }
+                    alert(`O faturamento total é de: R$ ${faturamento}`);
+                }
+                calcularFaturamento();
+                break;
+
+            default:
+                opcao = 0;
+                break;
+        }
+    
+    }
     //Saída
+    alert(`Programa encerrado!`);
 </script>
