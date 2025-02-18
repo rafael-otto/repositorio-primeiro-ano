@@ -6,15 +6,23 @@
     */
 
     //ENTRADA
+    let number = Number(prompt("Informe um número inteiro:"));
 
     //PROCESSAMENTO
     function cubo(number) {
-        alert(`O cubo de ${number} é ${number ** 3}`);
+        if (number === 0 || Number.isInteger(Number(number))) {
+
+            number = number ** 3;
+            alert(`O cubo do número informado é: ${number}`);
+
+        } else {
+            alert(`Informe um número inteiro`);
+
+        }
+
     }
 
-    let number = Number(prompt(`Informe um número para descobrir o seu cubo:`));
-    cubo(number);
-
     //SAÍDA
+    cubo(number);
 
 </script>
