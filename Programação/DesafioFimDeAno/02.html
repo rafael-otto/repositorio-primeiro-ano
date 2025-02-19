@@ -33,7 +33,7 @@
         switch (opcao) {
             case 1:
                 function listarQuartosDisponiveis() {
-                    
+                    quartosDisponiveis = "";
                     for (let contador = 0; contador < quartos.length; contador++) {
                         
                         if (quartos[contador].disponivel) {
@@ -52,8 +52,9 @@
                 break;
 
             case 2:
-                function reservarQuarto() {
-                    numeroReserva = Number(prompt(`Informe o número do quarto que você deseja reservar:`));
+                
+            numeroReserva = Number(prompt(`Informe o número do quarto que você deseja reservar:`));
+                function reservarQuarto(Number) {
                     
                     for (let contador = 0; contador < quartos.length; contador++) {
                         
@@ -69,12 +70,12 @@
                         }
                     }
                 }
-                reservarQuarto();
+                reservarQuarto(numeroReserva);
                 break;
 
             case 3:
-                function cancelarReserva() {
-                    reservaCancelada = Number(prompt(`Informe o número do quarto para cancelar a reserva:`));
+                reservaCancelada = Number(prompt(`Informe o número do quarto para cancelar a reserva:`));
+                function cancelarReserva(Number) {
                     
                     for (let contador = 0; contador < quartos.length; contador++) {
                         
@@ -89,7 +90,7 @@
                         }
                     }
                 }
-                cancelarReserva();
+                cancelarReserva(reservaCancelada);
                 break;
 
             case 4:
